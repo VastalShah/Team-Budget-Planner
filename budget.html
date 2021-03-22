@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Estimation</title>
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <a class="navbar-brand" href="#"><i class="fas fa-users"></i>&nbsp;Team Budget Planner</a> 
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Services</a>
+            <a class="nav-item nav-link active" href="budget.html" style="border-bottom: 3px solid olive;">Calculate Budget</a>
+            <a class="nav-item nav-link" href=""><i class="fas fa-sign-in-alt"></i> Login</a>
+          </div>
+        </div>
+    </nav>
+
+    <br>
+    <div class="container shadow bg-warning" >
+        <blockquote class="blockquote text-center">
+            <h1 class="display-4"><strong>Create Budget</strong></h1>
+        </blockquote>
+        <form style="padding: 1rem;" class="needs-validation">
+            <div class="form-row justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <label for="m_name"><strong>Manager's Name</strong></label>
+                    <input type="text" id="m_name" class="form-control" placeholder="Enter Name" required>
+                </div>
+            </div>
+            <div class="form-row justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <label for="v_name"><strong>Vendor's Name</strong></label>
+                    <input type="text" id="v_name" class="form-control" placeholder="Enter Name" required>
+                </div>
+            </div>
+            <div class="form-row justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <label for="servicesSelect"><strong>Select services</strong></label>
+                    <select multiple class="form-control" id="servicesSelect">
+                      <option>Website Development</option>
+                      <option>Mobile Application Development</option>
+                      <option>DevOps</option>
+                      <option>Cloud</option>
+                      <option>Data Analytics</option>
+                      <option>Software Testing</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-danger text-white" onclick="calculateBudget()">Calculate Budget</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="form-row justify-content-center align-items-center">
+            <div class="col-md-4">
+                <div id="output" class="card text-white bg-dark mb-3" style="max-width: 18rem; display: none;">
+                    <h4 class="card-header">Annual Budget</h4>
+                    <div class="card-body">
+                      <h5 class="card-title">Info card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</body>
+<script src="script.js"></script>
+</html>
