@@ -37,6 +37,6 @@ function calculateBudget(){
     output.style.display = 'block';
     output.querySelector("h5").innerHTML = "Total cost is: " +total;
     total = 0;
-    output.querySelector("p").innerHTML = "<strong><u>Selected Services are:</u></strong> " + "<br />" + selected;
+    output.querySelector("p").innerHTML = "<strong><u>Selected Services:</u></strong> " + "<br />" + selected;
     selected = '';
 }
